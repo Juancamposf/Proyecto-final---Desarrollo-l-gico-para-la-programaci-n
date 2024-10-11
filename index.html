@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .contenedor {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grupo-formulario {
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 8px;
+            margin-right: 10px;
+            width: 70%;
+        }
+        button {
+            padding: 8px 12px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Gestión de Inventario</h1>
+        <div class="grupo-formulario">
+            <input type="text" id="nombreProducto" placeholder="Nombre del producto" />
+            <input type="number" id="cantidadProducto" placeholder="Cantidad" />
+            <button onclick="agregarProducto()">Agregar Producto</button>
+        </div>
+
+        <h2>Inventario:</h2>
+        <ul id="listaProductos"></ul>
+
+        <h2>Actualizar Cantidad</h2>
+        <div class="grupo-formulario">
+            <input type="text" id="nombreProductoActualizar" placeholder="Nombre del producto" />
+            <input type="number" id="cantidadProductoActualizar" placeholder="Nueva cantidad" />
+            <button onclick="actualizarProducto()">Actualizar Producto</button>
+        </div>
+
+        <button onclick="eliminarSinStock()">Eliminar productos sin stock</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
